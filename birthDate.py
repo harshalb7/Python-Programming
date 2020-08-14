@@ -1,41 +1,41 @@
 def birthDate():
 
-	yy = getYear()
-	yy = checkYear(yy)
+	yy = getYear() #call for function to get year
+	yy = checkYear(yy) #check given enter year correct or not 
 
-	mm = getMonth()
-	mm = checkMonth(yy,mm)
+	mm = getMonth() #call for function to get Month
+	mm = checkMonth(yy,mm) #check given enter Month correct or not
 	
-	dd = getDate()
-	dd = checkD(yy, mm, dd)
+	dd = getDate() #call for function to get Date
+	dd = checkD(yy, mm, dd) #check given enter Date correct or not
 	
 	if int (mm) < 10:
 		mm = '0'+ mm
 	if int (dd) < 10:
 		dd = '0'+ dd
-	date = dd+'-'+mm+'-'+yy
+	date = dd+'-'+mm+'-'+yy #to print in correct format
 	print('Date: ',date)
 
 def checkDate(dd, mm, yy):
 	if int(mm) % 2 == 1:
-		if int(dd) < 0 or int (dd) >31:
-			return False
-		else:
+		if int(dd) < =0 or int (dd) >31:  # if date is greater than 31 or less than 0 or 0 return false
+			return False              
+		else:				 #else return true
 			return True
 	else:
-		if int(dd) < 0 or int (dd) >30:
+		if int(dd) < =0 or int (dd) >30: # if date is greater than 30 or less than 0 or 0 return false
 			return False
 		else:
-			return True
+			return True            #else return true
 
 def checkLeap(yy, mm, dd):
 	if leapYear(yy, mm) is True:
-		if int(dd) < 0 or int(dd) > 29:
+		if int(dd) < =0 or int(dd) > 29:
 			return False
 		else:
 			return True
 	else:
-		if int(dd) < 0 or int(dd) > 28:
+		if int(dd) < =0 or int(dd) > 28:
 			return False
 		else:
 			return True
@@ -126,4 +126,4 @@ def checkD(yy, mm, dd):
 			dd = getDate()
 	return dd
 
-birthDate()
+birthDate() #call for function
