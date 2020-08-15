@@ -30,21 +30,21 @@ def checkDate(dd, mm, yy):
 
 def checkLeap(yy, mm, dd):
 	if leapYear(yy, mm) is True:
-		if int(dd) < =0 or int(dd) > 29:
-			return False
+		if int(dd) < =0 or int(dd) > 29: # if in leap year feb has days greater than 29 and less than or equal 0
+			return False             #return false
 		else:
-			return True
+			return True             #else return true
 	else:
-		if int(dd) < =0 or int(dd) > 28:
-			return False
+		if int(dd) < =0 or int(dd) > 28:  # if in leap year feb has days greater than 29 and less than or equal 0
+			return False            #return false
 		else:
-			return True
+			return True             #else return true
 
 def leapYear(yy, mm):
-	if int(yy) % 4 == 0 and int(mm) == 2:
+	if int(yy) % 4 == 0 and int(mm) == 2:      #on dividing year by 4 if remainder is zero then its leap year
 		return True
 	else:
-		return False
+		return False                  #else ordinary year
 
 def getYear():
 	try:
