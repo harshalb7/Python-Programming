@@ -91,16 +91,16 @@ def checkYear(yy):   #defination of CheckYear function
 
 	return yy                                           #return correct year
 def checkMonth(yy, mm):    #defination of checkMonth function
-	while ( int(mm) <=0 or int(mm) > 12 ):
+	while ( int(mm) <=0 or int(mm) > 12 ):                #run loop till enter month is not in between 1 to 12
 		print('')
 		try:
 			if int(mm) <=0 or int(mm) > 12:
 				print('Enter Month is Invalid..Re-Enter Month.')
-				raise Exception() 
+				raise Exception()           #raise exception if month is not in between 1 to 12
 		except:
 			print('Month should be in between 1 to 12')
-			mm = getMonth()
-	return mm
+			mm = getMonth()  #re-enter correct month
+	return mm  #return correct month
 def checkD(yy, mm, dd):    #defination of Checkdate function
 	while ( checkLeap(yy, mm, dd) is False or checkDate(dd, mm, yy) is False ):
 		print('')
