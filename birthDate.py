@@ -46,26 +46,26 @@ def leapYear(yy, mm):
 	else:
 		return False                  #else ordinary year
 
-def getYear():
+def getYear(): #defination of getYear function
 	try:
-		yy = input('Enter Year : ')
+		yy = input('Enter Year : ')    #enter value of year
 		if not yy:
-			raise Exception()
+			raise Exception()      # enter value is empty then raise exception
 	except:
-		yy = '0'
+		yy = '0'                       #set to invalid value 0
 
-	return yy
+	return yy                              # return value of year
 
-def getMonth():
+def getMonth(): #defination of getMonth function
 	try:
-		mm = input('Enter Month : ')
+		mm = input('Enter Month : ')   #enter value of Month
 		if not mm:
-			raise Exception()
+			raise Exception()        # enter value is empty then raise exception
 	except:
-		mm = '0'
+		mm = '0'                        #set to invalid value 0
 
 	mm = str(int(mm))
-	return mm
+	return mm                             #return value of month
 
 def getDate():
 	try:
