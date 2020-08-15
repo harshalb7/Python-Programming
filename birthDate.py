@@ -67,30 +67,30 @@ def getMonth(): #defination of getMonth function
 	mm = str(int(mm))
 	return mm                             #return value of month
 
-def getDate():
+def getDate(): #defination of getDate function
 	try:
-		dd = input('Enter Date : ')
+		dd = input('Enter Date : ')    #enter value of date
 		if not dd:
-			raise Exception()
+			raise Exception()        # enter value is empty then raise exception
 	except:
-		dd = '0'
+		dd = '0'                     #set to invalid value 0
 
 	dd = str(int(dd))
-	return dd
+	return dd                           #return value of date
 
-def checkYear(yy):
-	while ( int(yy) <= 999 or int(yy) >2999):
+def checkYear(yy):   #defination of CheckYear function 
+	while ( int(yy) <= 999 or int(yy) >2999):             #run loop till enter year is not in between 1000 to 2999
 		try:
 			if int(yy) <= 999 or int(yy) >2999:
 				print('Enter Year is Invalid..Re-Enter Year.')
-				raise Exception() 
+				raise Exception()            #raise exception if year is not in between 1000 to 2999
 
 		except:
 			print('Year should be in between 1000 to 2999')
-			yy = getYear()
+			yy = getYear()                      #re-enter correct year
 
-	return yy
-def checkMonth(yy, mm):
+	return yy                                           #return correct year
+def checkMonth(yy, mm):    #defination of checkMonth function
 	while ( int(mm) <=0 or int(mm) > 12 ):
 		print('')
 		try:
@@ -101,7 +101,7 @@ def checkMonth(yy, mm):
 			print('Month should be in between 1 to 12')
 			mm = getMonth()
 	return mm
-def checkD(yy, mm, dd):
+def checkD(yy, mm, dd):    #defination of Checkdate function
 	while ( checkLeap(yy, mm, dd) is False or checkDate(dd, mm, yy) is False ):
 		print('')
 		try:
